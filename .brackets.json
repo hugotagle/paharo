@@ -1,0 +1,8 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/hugo/dev/github/paharo/platforms/ios/build/emulator/paharo.app/www/plugins/org.apache.cordova.device/www/device.js",
+        "/Users/hugo/dev/github/paharo/plugins/org.apache.cordova.device/src/windows/DeviceProxy.js",
+        "/Users/hugo/dev/github/paharo/www/js/app.js",
+        "/Users/hugo/dev/github/paharo/www/js/controllers.js"
+    ]
+}
