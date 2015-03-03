@@ -1,15 +1,13 @@
 var app = angular.module('paharo', ['ionic']);
 
-app.controller('SplashController', ['$scope', '$state', SplashController]);
-
-function SplashController($scope, $state) {
+app.controller('SplashController', ['$scope', '$state', function ($scope, $state) {
     $scope.register = function () {
         $state.go('register');
     }
     $scope.login = function () {
         $state.go('login');
     }
-}
+}]);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
