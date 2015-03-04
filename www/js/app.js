@@ -2,10 +2,9 @@ var app = angular.module('paharo', ['ionic', 'paharo.controllers']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/')
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
-
         .state('splash', {
             url: '/',
             templateUrl: 'templates/splash.html',
@@ -13,7 +12,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('login', {
             url: '/login',
-            templateUrl: 'templates/login.html'
+            templateUrl: 'templates/login.html',
+            controller: 'LoginController'
         })
         .state('register', {
             url: '/register',
