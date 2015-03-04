@@ -1,4 +1,4 @@
-<ion-view view-title="Splash">
+<ion-view view-title="Login" data-ng-controller="LoginController">
     <ion-content>
         <div class="list list-inset">
             <label class="item item-input">
@@ -7,6 +7,11 @@
             <label class="item item-input">
                 <input type="text" placeholder="Password">
             </label>
+        </div>
+        <div class="row" s>
+            <div class="col">
+                <button class="button button-block" data-ng-click="login()">Login</button>
+            </div>
         </div>
     </ion-content>
 </ion-view>
