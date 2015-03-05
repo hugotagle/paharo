@@ -47,7 +47,7 @@ angular.module('paharo.controllers', [])
             // if authentication failed
             //   pop up? stay put
             // else 
-            //   local storage username, password, token
+            //   local storage registered, username, password, token
             //   go home
             //
             $state.go('home');
