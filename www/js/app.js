@@ -1,4 +1,4 @@
-var app = angular.module('paharo', ['ionic', 'paharo.controllers']);
+var app = angular.module('paharo', ['ionic', 'paharo.controllers', 'paharo.services']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
