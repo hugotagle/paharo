@@ -48,10 +48,10 @@ angular.module('paharo.controllers', [])
                 GlobalPC.authenticate({
                     username: $scope.login.username,
                     password: $scope.login.password
-                }).success(function () {
-                    alert('worked!');
-                }).error(function () {
-                    alert('error');
+                }).success(function (data, status, headers, config) {
+                    alert('worked!'+JSON.stringify(data));
+                }).error(function (data) {
+                    alert('error'+JSON.stringify(data));
                 });
             }
             // authenticate with username password
