@@ -33,17 +33,27 @@ angular.module('paharo.controllers', [])
         $scope.register = function () {
             $state.go('register');
         }
-        $scope.login = function () {
+        $scope.login = function () { 
             $state.go('login');
         }
 }])
     //
     // Login
-    //
-    .controller('LoginController', ['$scope', '$state', '$ionicViewService', function ($scope, $state, $ionicViewService) {
+    .controller('LoginController', ['$scope', 'GlobalPC', '$state', '$ionicViewService', function ($scope, GlobalPC, $state, $ionicViewService) {
 
         $scope.login = function () {
-            alert('username: '+$scope.login.username + ', password: '+$scope.login.password);
+            
+                alert('username: ' + $scope.login.username + ', password: ' + $scope.login.password);
+
+                GlobalPC.authenticate({
+                    username: $scope.login.username,
+                    password: $scope.login.password
+                }).success(function () {
+                    alert('worked!');
+                }).error(function () {
+                    alert('error');
+                });
+            }
             // authenticate with username password
             // if authentication failed
             //   pop up? stay put
@@ -52,8 +62,7 @@ angular.module('paharo.controllers', [])
             //   go home
             //
             //$state.go('home');
-        }
-}])
+    }])
     //
     // Home
     //

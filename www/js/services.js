@@ -1,9 +1,11 @@
 angular.module('paharo.services', [])
 
-.factory('GlobalPC', ['$http', 'PARSE_CREDENTIALS', function ($http, PARSE_CREDENTIALS) {
+.factory('GlobalPC', ['$http', function ($http) {
     return {
-        authenticate: function () {
-            return $http.post('https://localhost/_dev/api/', data, {
+        authenticate: function (login) {
+            //alert('authenticate');
+            $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+            return $http.post('https://localhost/_dev/api/', login, {
                 headers: {}
             });
         }
