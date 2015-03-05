@@ -7,7 +7,6 @@ angular.module('paharo.services', [])
             alert(queryString);
 
             $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
-            //return $http.post('https://localhost/_dev/api/', 'username=hugo.tagle%40gmail.com&password=Password1%21', {
             return $http.post('https://localhost/_dev/api/', queryString, {
                 headers: {}
             });
