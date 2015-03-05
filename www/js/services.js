@@ -3,9 +3,12 @@ angular.module('paharo.services', [])
 .factory('GlobalPC', ['$http', function ($http) {
     return {
         authenticate: function (login) {
-            //alert('authenticate');
+            var queryString = 'username=' + login.username + '&password=' + login.password;
+            alert(queryString);
+
             $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
-            return $http.post('https://localhost/_dev/api/', login, {
+            //return $http.post('https://localhost/_dev/api/', 'username=hugo.tagle%40gmail.com&password=Password1%21', {
+            return $http.post('https://localhost/_dev/api/', queryString, {
                 headers: {}
             });
         }
