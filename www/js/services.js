@@ -2,8 +2,8 @@ angular.module('paharo.services', [])
 
 .factory('GlobalPC', ['$http', function ($http) {
     return {
-        authenticate: function (login) {
-            var queryString = 'username=' + login.username + '&password=' + login.password;
+        authenticate: function (data) {
+            var queryString = 'username=' + data.username + '&password=' + data.password;
             alert(queryString);
 
             $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
