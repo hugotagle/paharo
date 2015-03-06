@@ -49,11 +49,17 @@ angular.module('paharo.controllers', [])
                     username: $scope.login.username,
                     password: $scope.login.password
                 }).success(function (data, status, headers, config) {
-                    alert('worked!'+JSON.stringify(data));
+                    //
+                    var stuff = JSON.parse(JSON.stringify(data));
+                    var values = stuff.data.split('|');
+                    //
+                    alert('profileId: ' + values[0] + ' authKey: '   + values[1]);    
+                    //
                 }).error(function (data) {
                     alert('error'+JSON.stringify(data));
                 });
             }
+        
             // authenticate with username password
             // if authentication failed
             //   pop up? stay put
