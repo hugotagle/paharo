@@ -39,8 +39,8 @@ angular.module('paharo.controllers', [])
 }])
     //
     // Login
-    .controller('LoginController', ['$scope', 'GlobalPC', '$state', '$ionicViewService', function ($scope, GlobalPC, $state, $ionicViewService) {
-        
+    .controller('LoginController', ['$scope', '$rootScope', 'GlobalPC', '$state', '$ionicViewService', function ($scope, $rootScope, GlobalPC, $state, $ionicViewService) {
+
         $scope.login = function () {
 
             alert('username: ' + $scope.login.username + ', password: ' + $scope.login.password);
@@ -51,12 +51,14 @@ angular.module('paharo.controllers', [])
             }).success(function (payload, status) {
                 //
                 var parsed = JSON.parse(JSON.stringify(payload));
-                var values = parsed.data.split('|');     // 'data' is the attribute with profile id and auth key
+                var values = parsed.data.split('|'); // 'data' is the attribute with profile id and auth key
                 //
                 alert('profileId: ' + values[0] + ' authKey: ' + values[1]);
                 //
                 // local storage for registered, username, password, profile id, and auth key
-                $scope.profileId = values[0];
+                $rootScope.profileId = values[0];
+                $rootScope.authKey = values[1];
+
                 //
                 $state.go('home');
                 //
@@ -69,7 +71,7 @@ angular.module('paharo.controllers', [])
     //
     // Home
     //
-    .controller('HomeController', ['$scope', '$state', '$ionicViewService', function ($scope, $state, $ionicViewService) {
+    .controller('HomeController', ['$scope', '$rootScope', '$state', '$ionicViewService', function ($scope, $rootScope, $state, $ionicViewService) {
 
         $scope.profile = function () {
             $state.go('profile');

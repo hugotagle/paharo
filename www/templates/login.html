@@ -5,7 +5,9 @@
                 <input type="text" placeholder="Username" data-ng-model="login.username">
             </label>
             <label class="item item-input">
-                <input type="password" placeholder="Password" data-ng-model="login.password">
+                <div data-ng-init="login.password='Password1!'">
+                    <input type="password" placeholder="Password" data-ng-model="login.password">
+                </div>
             </label>
         </div>
         <div class="row" s>
