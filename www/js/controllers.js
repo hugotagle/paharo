@@ -33,41 +33,38 @@ angular.module('paharo.controllers', [])
         $scope.register = function () {
             $state.go('register');
         }
-        $scope.login = function () { 
+        $scope.login = function () {
             $state.go('login');
         }
 }])
     //
     // Login
     .controller('LoginController', ['$scope', 'GlobalPC', '$state', '$ionicViewService', function ($scope, GlobalPC, $state, $ionicViewService) {
-
-        $scope.login = function () {
-            
-                alert('username: ' + $scope.login.username + ', password: ' + $scope.login.password);
-
-                GlobalPC.authenticate({
-                    username: $scope.login.username,
-                    password: $scope.login.password
-                }).success(function (data, status, headers, config) {
-                    //
-                    var stuff = JSON.parse(JSON.stringify(data));
-                    var values = stuff.data.split('|');
-                    //
-                    alert('profileId: ' + values[0] + ' authKey: '   + values[1]);    
-                    //
-                }).error(function (data) {
-                    alert('error'+JSON.stringify(data));
-                });
-            }
         
-            // authenticate with username password
-            // if authentication failed
-            //   pop up? stay put
-            // else 
-            //   local storage registered, username, password, token
-            //   go home
-            //
-            //$state.go('home');
+        $scope.login = function () {
+
+            alert('username: ' + $scope.login.username + ', password: ' + $scope.login.password);
+
+            GlobalPC.authenticate({
+                username: $scope.login.username,
+                password: $scope.login.password
+            }).success(function (payload, status) {
+                //
+                var parsed = JSON.parse(JSON.stringify(payload));
+                var values = parsed.data.split('|');     // 'data' is the attribute with profile id and auth key
+                //
+                alert('profileId: ' + values[0] + ' authKey: ' + values[1]);
+                //
+                // local storage for registered, username, password, profile id, and auth key
+                $scope.profileId = values[0];
+                //
+                $state.go('home');
+                //
+            }).error(function (data, status) {
+                alert('error' + JSON.stringify(status));
+                // pop up? show validation error
+            });
+        }
     }])
     //
     // Home
