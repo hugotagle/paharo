@@ -1,8 +1,13 @@
-<ion-view view-title="Splash">
+<ion-view view-title="Settings" data-ng-controller="SettingsController">
     <ion-content>
-        <div class="card">
-            <div class="item item-text-wrap">
-                This is the settings
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input type="text" placeholder="host" data-ng-model="params.host">
+            </label>
+        </div>
+        <div class="row" s>
+            <div class="col">
+                <button class="button button-block button-positive" data-ng-click="submit()">Submit</button>
             </div>
         </div>
     </ion-content>
