@@ -21,7 +21,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('settings', {
             url: '/settings',
-            templateUrl: 'templates/settings.html'
+            templateUrl: 'templates/settings.html',
+            controller: 'SettingsController'
         })
         .state('home', {
             url: '/home',
