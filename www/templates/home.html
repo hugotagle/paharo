@@ -1,9 +1,9 @@
 <ion-view view-title="Home">
     <ion-content>
         <div class="card">
-            <div class="item item-text-wrap">
+            <div class="item item-text-wrap" data-ng-click="goProfile()">
                 <div data-ng-model="profileId"> profile id: {{ profileId }}</div>
-                <div data-ng-model="profileId"> authKey: {{ authKey }}</div>
+                <div data-ng-model="authKey"> authKey: {{ authKey }}</div>
             </div>
         </div>
     </ion-content>
