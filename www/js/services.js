@@ -14,9 +14,10 @@ angular.module('paharo.services', [])
         },
         getProfile: function (data) {
 
-            return $http.get('http://localhost/_dev/api/?method=profile&format=json&authKey=', data, {
-                headers: {}
-            });
+            var fullUrl = 'http://' + window.localStorage.getItem('host') + '/_dev/api/?method=profile&format=json&authKey='+data.authKey;
+            alert(fullUrl);
+            
+            return $http.get(fullUrl);
         }
     }
 
