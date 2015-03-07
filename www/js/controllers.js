@@ -85,14 +85,15 @@ angular.module('paharo.controllers', [])
                 })
                 .success(function (payload, status) {
                     //
-                    alert(status);
-                    var parsed = JSON.parse(JSON.stringify(payload));
-
+                    alert(status + ':' + payload);
+                    //var parsed = JSON.parse(JSON.stringify(payload));
+                    //var values = parsed.data.split('|'); // 'data' is the attribute with profile id and auth key
+                    //alert(parsed);
                     //
                     //$state.go('home');
                     //
                 }).error(function (data, status) {
-                    alert('error' + JSON.stringify(status));
+                    alert('error' + JSON.stringify(data));
                     // pop up? show validation error
                 });
 
