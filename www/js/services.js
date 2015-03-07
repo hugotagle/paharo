@@ -5,7 +5,7 @@ angular.module('paharo.services', [])
         authenticate: function (data) {
             
             var queryString = 'username=' + data.username + '&password=' + data.password;
-            alert(queryString);
+            //alert(queryString);
 
             $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
             return $http.post('http://' + window.localStorage.getItem('host') + '/_dev/api/', queryString, {
@@ -15,7 +15,7 @@ angular.module('paharo.services', [])
         getProfile: function (data) {
 
             var fullUrl = 'http://' + window.localStorage.getItem('host') + '/_dev/api/?method=profile&format=json&authKey='+data.authKey;
-            alert(fullUrl);
+            //alert(fullUrl);
             
             return $http.get(fullUrl);
         }

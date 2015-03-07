@@ -33,6 +33,7 @@ app.config(function ( $httpProvider, $stateProvider, $urlRouterProvider) {
         })
         .state('profile', {
             url: '/profile',
-            templateUrl: 'templates/profile.html'
+            templateUrl: 'templates/profile.html',
+            controller: 'ProfileController'
         })
 })

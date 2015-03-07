@@ -64,7 +64,6 @@ angular.module('paharo.controllers', [])
                 // local storage for registered, username, password, profile id, and auth key
                 $rootScope.profileId = values[0];
                 $rootScope.authKey = values[1];
-
                 //
                 $state.go('home');
                 //
@@ -78,7 +77,7 @@ angular.module('paharo.controllers', [])
 
         $scope.goProfile = function () {
 
-            alert('authKey: ' + $rootScope.authKey);
+            //alert('authKey: ' + $rootScope.authKey);
 
             GlobalPC.getProfile({
                     authKey: $rootScope.authKey
@@ -87,11 +86,13 @@ angular.module('paharo.controllers', [])
                     //
                     //alert(status + ':' + payload);
                     var parsed = JSON.parse(JSON.stringify(payload));
-                    alert(''+parsed.summary);
+                    $rootScope.summary = parsed.summary;
+                
+                    alert(''+$rootScope.summary);
                     //var values = parsed.data.split('|'); // 'data' is the attribute with profile id and auth key
                     //alert(parsed);
                     //
-                    //$state.go('home');
+                    $state.go('profile');
                     //
                 }).error(function (data, status) {
                     alert('error' + JSON.stringify(data));
@@ -101,6 +102,12 @@ angular.module('paharo.controllers', [])
             //$state.go('profile');
         }
 
+    }])
+    .controller('ProfileController', ['$scope', '$rootScope', '$state', '$ionicViewService', function ($scope, $rootScope, $state, $ionicViewService) {
+        
+        $scope.params = {};
+        //$scope.params.summary = 'Summary:  ' + $rootScope.summary; // get host from local storage
+        
     }])
     .controller('SettingsController', ['$scope', '$state', '$ionicViewService', function ($scope, $state, $ionicViewService) {
 
