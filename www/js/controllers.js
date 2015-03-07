@@ -36,9 +36,10 @@ angular.module('paharo.controllers', [])
         $scope.login = function () {
             $state.go('login');
         }
-}])
-    //
-    // Login
+        $scope.settings = function() {
+            $state.go('settings');
+        }
+    }])
     .controller('LoginController', ['$scope', '$rootScope', 'GlobalPC', '$state', '$ionicViewService', function ($scope, $rootScope, GlobalPC, $state, $ionicViewService) {
 
         $scope.login = function () {
@@ -68,12 +69,23 @@ angular.module('paharo.controllers', [])
             });
         }
     }])
-    //
-    // Home
-    //
     .controller('HomeController', ['$scope', '$rootScope', '$state', '$ionicViewService', function ($scope, $rootScope, $state, $ionicViewService) {
 
         $scope.profile = function () {
             $state.go('profile');
         }
-}]);
+
+    }])
+    .controller('SettingsController', ['$scope', '$state', '$ionicViewService', function ($scope, $state, $ionicViewService) {
+
+        $scope.params = {};
+        $scope.params.host = window.localStorage.getItem('host'); // get host from local storage
+        
+        $scope.submit = function () {
+            
+            window.localStorage.setItem('host', $scope.params.host); // set host in local storage 
+
+            $state.go('splash'); // this is just for development; changing host is just for development.
+        }
+
+    }]);
