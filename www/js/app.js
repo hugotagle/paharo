@@ -1,7 +1,9 @@
 var app = angular.module('paharo', ['ionic', 'paharo.controllers', 'paharo.services']);
 
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(function (/*$httpProvider, */$stateProvider, $urlRouterProvider) {
 
+    //$httpProvider.defaults.withCredentials(true);
+    
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
