@@ -36,25 +36,30 @@ angular.module('paharo.controllers', [])
         $scope.login = function () {
             $state.go('login');
         }
-        $scope.settings = function() {
+        $scope.settings = function () {
             $state.go('settings');
         }
     }])
     .controller('LoginController', ['$scope', '$rootScope', 'GlobalPC', '$state', '$ionicViewService', function ($scope, $rootScope, GlobalPC, $state, $ionicViewService) {
 
+        $scope.params = {
+            username: 'hugo.tagle@gmail.com',
+            password: 'Password1!'
+        };
+
         $scope.login = function () {
 
-            alert('username: ' + $scope.login.username + ', password: ' + $scope.login.password);
+            //alert('username: ' + $scope.login.username + ', password: ' + $scope.login.password);
 
             GlobalPC.authenticate({
-                username: $scope.login.username,
-                password: $scope.login.password
+                username: $scope.params.username,
+                password: $scope.params.password
             }).success(function (payload, status) {
                 //
                 var parsed = JSON.parse(JSON.stringify(payload));
                 var values = parsed.data.split('|'); // 'data' is the attribute with profile id and auth key
                 //
-                alert('profileId: ' + values[0] + ' authKey: ' + values[1]);
+                //alert('profileId: ' + values[0] + ' authKey: ' + values[1]);
                 //
                 // local storage for registered, username, password, profile id, and auth key
                 $rootScope.profileId = values[0];
@@ -69,10 +74,29 @@ angular.module('paharo.controllers', [])
             });
         }
     }])
-    .controller('HomeController', ['$scope', '$rootScope', '$state', '$ionicViewService', function ($scope, $rootScope, $state, $ionicViewService) {
+    .controller('HomeController', ['$scope', '$rootScope', 'GlobalPC', '$state', '$ionicViewService', function ($scope, $rootScope, GlobalPC, $state, $ionicViewService) {
 
-        $scope.profile = function () {
-            $state.go('profile');
+        $scope.goProfile = function () {
+
+            alert('authKey: ' + $rootScope.authKey);
+
+            GlobalPC.getProfile({
+                    authKey: $rootScope.authKey
+                })
+                .success(function (payload, status) {
+                    //
+                    alert(status);
+                    var parsed = JSON.parse(JSON.stringify(payload));
+
+                    //
+                    //$state.go('home');
+                    //
+                }).error(function (data, status) {
+                    alert('error' + JSON.stringify(status));
+                    // pop up? show validation error
+                });
+
+            //$state.go('profile');
         }
 
     }])
@@ -80,9 +104,9 @@ angular.module('paharo.controllers', [])
 
         $scope.params = {};
         $scope.params.host = window.localStorage.getItem('host'); // get host from local storage
-        
+
         $scope.submit = function () {
-            
+
             window.localStorage.setItem('host', $scope.params.host); // set host in local storage 
 
             $state.go('splash'); // this is just for development; changing host is just for development.
