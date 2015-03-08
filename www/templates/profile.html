@@ -1,8 +1,38 @@
 <ion-view view-title="Profile">
     <ion-content>
-        <div class="card">
-            <div class="item item-text-wrap">
-                <div data-ng-model="params.summary"> {{ profile.summary }}</div>
+        <div class="row" s>
+            <div class="col">
+                {{ p.summary }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Name: </div>
+            <div class="col">
+                {{ p.contact.first_name + ' ' + p.contact.middle_initial + ' ' + p.contact.last_name }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Email: </div>
+            <div class="col">
+                {{ p.contact.email }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <li data-ng-repeat="x in p.flight_hours">
+                        {{ x.AIRCRAFT_NAME }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <li data-ng-repeat="x in p.certifications">
+                        {{ x.CERT_NAME }}
+                    </li>
+                </ul>
             </div>
         </div>
     </ion-content>
