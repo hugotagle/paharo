@@ -1,14 +1,19 @@
 <ion-view view-title="Profile">
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">Paharo</h1>
+    </ion-header-bar>
     <ion-content>
         <div class="row">
             &nbsp;
         </div>
         <div class="row">
             <div class="col">
-                <b>{{ p.contact.first_name + ' ' + p.contact.middle_initial + ' ' + p.contact.last_name }}</b>
+                <h4><b>{{ p.contact.first_name + ' ' + p.contact.middle_initial + ' ' + p.contact.last_name }}</b></h4>
             </div>
+        </div>
+        <div class="row">
             <div class="col">
-                <b>{{ p.contact.email }}</b>
+                <i>{{ p.contact.email }}</i>
             </div>
         </div>
         <div class="row">
