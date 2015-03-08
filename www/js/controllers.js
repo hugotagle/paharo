@@ -86,7 +86,7 @@ angular.module('paharo.controllers', [])
                     //
                     //alert(status + ':' + payload);
                     var parsed = JSON.parse(JSON.stringify(payload));
-                    $rootScope.profile = parsed;
+                    $rootScope.p = parsed;
                 
                     //alert(''+$rootScope.summary);
                     //var values = parsed.data.split('|'); // 'data' is the attribute with profile id and auth key
