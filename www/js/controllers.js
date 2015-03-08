@@ -99,9 +99,10 @@ angular.module('paharo.controllers', [])
                     // pop up? show validation error
                 });
 
-            //$state.go('profile');
         }
-
+        $scope.settings = function () {
+            alert('Will show Settings screen');
+        }
     }])
     .controller('ProfileController', ['$scope', '$rootScope', '$state', '$ionicViewService', function ($scope, $rootScope, $state, $ionicViewService) {
         
