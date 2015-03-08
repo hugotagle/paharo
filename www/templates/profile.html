@@ -3,21 +3,17 @@
         <div class="row">
             &nbsp;
         </div>
-        <div class="row" s>
+        <div class="row">
             <div class="col">
-                {{ p.summary }}
+                <b>{{ p.contact.first_name + ' ' + p.contact.middle_initial + ' ' + p.contact.last_name }}</b>
+            </div>
+            <div class="col">
+                <b>{{ p.contact.email }}</b>
             </div>
         </div>
         <div class="row">
-            <div class="col">Name: </div>
             <div class="col">
-                {{ p.contact.first_name + ' ' + p.contact.middle_initial + ' ' + p.contact.last_name }}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">Email: </div>
-            <div class="col">
-                {{ p.contact.email }}
+                <i>{{ p.summary }}</i>
             </div>
         </div>
         <div class="row">
