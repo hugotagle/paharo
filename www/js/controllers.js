@@ -87,12 +87,13 @@ angular.module('paharo.controllers', [])
                     //alert(status + ':' + payload);
                     var parsed = JSON.parse(JSON.stringify(payload));
                     $rootScope.p = parsed;
-                
+
                     //alert(''+$rootScope.summary);
                     //var values = parsed.data.split('|'); // 'data' is the attribute with profile id and auth key
                     //alert(parsed);
                     //
-                    $state.go('profile');
+                    $state.go('pro.contact');
+                    //$state.go('profile');
                     //
                 }).error(function (data, status) {
                     alert('error' + JSON.stringify(data));
@@ -105,10 +106,10 @@ angular.module('paharo.controllers', [])
         }
     }])
     .controller('ProfileController', ['$scope', '$rootScope', '$state', '$ionicViewService', function ($scope, $rootScope, $state, $ionicViewService) {
-        
+
         $scope.params = {};
         //$scope.params.summary = 'Summary:  ' + $rootScope.summary; // get host from local storage
-        
+
     }])
     .controller('SettingsController', ['$scope', '$state', '$ionicViewService', function ($scope, $state, $ionicViewService) {
 
@@ -121,5 +122,10 @@ angular.module('paharo.controllers', [])
 
             $state.go('splash'); // this is just for development; changing host is just for development.
         }
+
+    }])
+    .controller('ProController', ['$scope', '$rootScope', '$state', '$ionicViewService', function ($scope, $rootScope, $state, $ionicViewService) {
+
+        $scope.p = $rootScope.p;
 
     }]);
