@@ -128,4 +128,9 @@ angular.module('paharo.controllers', [])
 
         $scope.p = $rootScope.p;
 
+        $scope.goHome = function () {
+
+            $state.go('home'); 
+        }
+
     }]);
