@@ -1,12 +1,14 @@
 <ion-view view-title="Certifications">
     <ion-content>
-        <div class="row">
-            <div class="col">
-                <ul>
-                    <li data-ng-repeat="x in p.certifications">
-                        {{ x.CERT_NAME }}
-                    </li>
-                </ul>
+        <div class="card dark">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li data-ng-repeat="x in p.certifications">
+                            {{ x.CERT_NAME }}
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </ion-content>

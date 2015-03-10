@@ -1,13 +1,26 @@
 <ion-view view-title="Flight Hours">
     <ion-content>
-        <div class="row">
-            <div class="col">
-                <ul>
-                    <li data-ng-repeat="x in p.flight_hours">
-                        {{ x.AIRCRAFT_NAME }}
-                    </li>
-                </ul>
-            </div>
+        <div class="card dark">
+            <ul>
+                <li data-ng-repeat="x in p.flight_hours">
+                    <div class="row">
+                        <div class="col-20">
+                            Aircraft:
+                        </div>
+                        <div class="col">
+                            <b>{{ x.AIRCRAFT_NAME }}</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-20">
+                            PIC:
+                        </div>
+                        <div class="col">
+                            <b>{{ x.PIC_HOURS }}</b>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </ion-content>
 </ion-view>

@@ -1,18 +1,20 @@
 <ion-view view-title="Education">
     <ion-content>
-        <div class="row">
-            <div class="col">
-                {{ p.education.highest_level.FORMAL_TRAINING}}
+        <div class="card dark">
+            <div class="row">
+                <div class="col">
+                    {{ p.education.highest_level.FORMAL_TRAINING}}
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col">
-                <ul>
-                    <li data-ng-repeat="x in p.education.education_history">
-                        {{ x.DEGREE }}
-                    </li>
-                </ul>
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li data-ng-repeat="x in p.education.education_history">
+                            {{ x.DEGREE }}
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </ion-content>

@@ -1,16 +1,23 @@
 <ion-view view-title="Home" hide-back-button="false">
-    <ion-header-bar class="bar-stable">
+    <ion-header-bar class="bar-balanced">
         <h1 class="title">Paharo</h1>
     </ion-header-bar>
     <ion-content>
         <div class="card">
             <div class="item item-text-wrap" data-ng-click="goProfile()">
-                <div data-ng-model="profileId"> profile id: {{ profileId }}</div>
-                <div data-ng-model="authKey"> authKey: {{ authKey }}</div>
+                <!--<div data-ng-model="profileId"> profile id: {{ profileId }}</div>
+                <div data-ng-model="authKey"> authKey: {{ authKey }}</div>-->
+                <h2>My Profile</h2>
             </div>
         </div>
+        <div class="card">
+            <div class="item item-text-wrap" data-ng-click="goProfile()">
+                <h2>Other Stuff</h2>
+            </div>
+        </div>        
     </ion-content>
     <ion-footer-bar class="bar-stable">
+        <div class="title">&nbsp;</div>
         <div class="buttons">
             <button class="button icon ion-gear-a royal" data-ng-click="settings()"></button>
         </div>
