@@ -1,26 +1,57 @@
 <ion-view view-title="Flight Hours">
-    <ion-content>
-        <div class="card dark">
-            <ul>
-                <li data-ng-repeat="x in p.flight_hours">
+    <ion-content scroll="true">
+        <ul>
+            <li data-ng-repeat="x in p.flight_hours">
+                <div class="card">
                     <div class="row">
-                        <div class="col-20">
-                            Aircraft:
-                        </div>
-                        <div class="col">
+                        <div class="col" style="font-size:18px">
                             <b>{{ x.AIRCRAFT_NAME }}</b>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-20">
-                            PIC:
+                        <div class="col">
+                            pic: <b>{{ x.PIC_HOURS + 0 }}</b>
                         </div>
                         <div class="col">
-                            <b>{{ x.PIC_HOURS }}</b>
+                            sic: <b>{{ x.SIC_HOURS + 0 }}</b>
                         </div>
+                        <div class="col">
+                            inst: <b>{{ x.ins_HOURS + 0 }}</b>
+                        </div>            
                     </div>
-                </li>
-            </ul>
-        </div>
+                    <div class="row">
+                        <div class="col">
+                            night: <b>{{ x.PIC_HOURS + 0 }}</b>
+                        </div>
+                        <div class="col">
+                            last 12 mo: <b>{{ x.SIC_HOURS + 0 }}</b>
+                        </div>
+                        <div class="col">
+                            landigs: <b>{{ x.ins_HOURS + 0 }} </b>
+                        </div>            
+                    </div>            
+                    <div class="row">
+                        <div class="col">
+                            last flown: <b>{{ x.LAST_FLOWN_DATE }}</b>
+                        </div>
+                        <div class="col">
+                            type rating: <b>{{ x.CUR_TYPE_RATING + 0 }}</b>
+                        </div>        
+                        <div class="col">
+                            &nbsp
+                        </div>                           
+                    </div>       
+                    <div class="row">
+                        <div class="col">
+                            notes: <b>{{ x.NOTES }}</b>            
+                    </div>                       
+                </div>
+            </li>
+        </ul>
     </ion-content>
 </ion-view>
+<!--
+            "LAST_FLOWN_DATE": "07-2014",
+            "CUR_TYPE_RATING": "Y",
+            "NOTES": "F14 Notes"
+-->

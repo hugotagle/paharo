@@ -2,20 +2,63 @@
     <ion-content>
         <div class="card dark">
             <div class="row">
-                <div class="col">
+                <div class="col" style="font-size:18px">
                     <b>{{ p.contact.first_name + ' ' + p.contact.middle_initial + ' ' + p.contact.last_name }}</b>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <i>{{ p.contact.email }}</i>
+                    &nbsp; </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    email: <b>{{ p.contact.email}}</b>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <i>{{ p.summary }}</i>
+                    alternate email: <b>{{ p.contact.alternate_email}}</b>
                 </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col">
+                    primary phone: <b>{{ p.contact.primary_phone}}</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    secondary phone: <b>{{ p.contact.secondary_phone}}</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    &nbsp; </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    address: <b>{{ p.contact.address1}}</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    second line: <b>{{ p.contact.address2}}</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    city/state/zip: <b>{{ p.contact.city + ', ' + p.contact.state + ' ' + p.contact.zip}}</b>
+                </div>
+            </div>
     </ion-content>
 </ion-view>
+
+<!--
+        "available_now_flag": "N",
+        "availability_date": "01-JUL-14",
+        "availability": "2014-07-01",
+        "source_training": null,
+        "visible": "N",
+        "gender": "Male",
+        "ethnicity": "Hispanic or Latino"
+
+-->

@@ -1,15 +1,27 @@
 <ion-view view-title="Certifications">
-    <ion-content>
-        <div class="card dark">
-            <div class="row">
-                <div class="col">
-                    <ul>
-                        <li data-ng-repeat="x in p.certifications">
-                            {{ x.CERT_NAME }}
-                        </li>
-                    </ul>
+    <ion-content scroll="true">
+        <ul>
+            <li data-ng-repeat="x in p.certifications">
+                <div class="card">
+                    <div class="row">
+                        <div class="col" style="font-size:18px">
+                            <b>{{ x.CERT_NAME }}</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            issued: <b>{{ x.ISSUED_DATE }}</b>
+                        </div>
+                        <div class="col">
+                            expired: <b>{{ x.EXPIRED_DATE }}</b>
+                        </div>
+                        <div class="col">
+                            &nbsp;</b>
+                        </div>            
+                    </div>
+
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
     </ion-content>
 </ion-view>
