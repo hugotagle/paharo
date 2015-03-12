@@ -1,9 +1,9 @@
 /* Empty. Add your own CSS if you like */
 
 .profile-subheader {
-    font-size: 16px;
-    color: darkgreen;
-    font-weight: 500;
+    font-size: 17px;
+    color: midnightblue;
+    font-weight: 400;
 }
 
 .profile-label {
@@ -13,7 +13,8 @@
 }
 
 .profile-text {
+    font-family: 'Tahoma', 'Geneva', sans-serif;
     font-size: 15px;
-    color: darkred;
+    color: midnightblue;
     font-weight: 300;
 }
