@@ -1,7 +1,7 @@
 <ion-view view-title="Flight Hours">
     <ion-content>
         <ul>
-            <li data-ng-repeat="x in p.flight_hours">
+            <li data-ng-repeat="x in p.flight_hours | orderBy:'AIRCRAFT_NAME'">
                 <div class="card">
                     <div class="row">
                         <div class="col" style="font-size:16px">
