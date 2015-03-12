@@ -10,32 +10,32 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <span class="profile-label">PIC:</span> <span class="profile-text">{{ x.PIC_HOURS + 0 }}</span>
+                            <span class="profile-label">PIC:</span> <span class="profile-text">{{ x.PIC_HOURS ? x.PIC_HOURS : 0 }}</span>
                         </div>
                         <div class="col">
-                            <span class="profile-label">SIC:</span> <span class="profile-text">{{ x.SIC_HOURS + 0 }}</span>
+                            <span class="profile-label">SIC:</span> <span class="profile-text">{{ x.SIC_HOURS ? x.SIC_HOURS : 0 }}</span>
                         </div>
                         <div class="col">
-                            <span class="profile-label">INST:</span> <span class="profile-text">{{ x.INS_HOURS + 0 }}</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <span class="profile-label">NIGHT:</span> <span class="profile-text">{{ x.NIGHT_HOURS + 0 }}</span>
-                        </div>
-                        <div class="col">
-                            <span class="profile-label">LAST 12 MO:</span> <span class="profile-text">{{ x.LAST_12MO_HOURS + 0 }}</span>
-                        </div>
-                        <div class="col">
-                            <span class="profile-label">LANDING:</span> <span class="profile-text">{{ x.NUMBER_LANDINGS + 0 }}</span>
+                            <span class="profile-label">INST:</span> <span class="profile-text">{{ x.INS_HOURS ? x.INS_HOURS : 0 }}</span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <span class="profile-label">LAST FLOWN:</span> <span class="profile-text">{{ x.LAST_FLOWN_DATE}}</span>
+                            <span class="profile-label">NIGHT:</span> <span class="profile-text">{{ x.NIGHT_HOURS ? x.NIGHT_HOURS : 0 }}</span>
                         </div>
                         <div class="col">
-                            <span class="profile-label">TYPE RATING:</span> <span class="profile-text">{{ x.CUR_TYPE_RATING}}</span>
+                            <span class="profile-label">LAST 12 MO:</span> <span class="profile-text">{{ x.LAST_12MO_HOURS ? x.LAST_12MO_HOURS : 0 }}</span>
+                        </div>
+                        <div class="col">
+                            <span class="profile-label">LANDING:</span> <span class="profile-text">{{ x.NUMBER_LANDINGS ? x.NUMBER_LANDINGS : 0 }}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <span class="profile-label">LAST FLOWN:</span> <span class="profile-text">{{ x.LAST_FLOWN_DATE }}</span>
+                        </div>
+                        <div class="col">
+                            <span class="profile-label">TYPE RATING:</span> <span class="profile-text">{{ x.CUR_TYPE_RATING }}</span>
                         </div>
                     </div>
                     <div class="row">
