@@ -4,12 +4,12 @@
             <div class="card">
                 <div class="row">
                     <div class="col">
-                        training: <b>{{ p.education.highest_level.FORMAL_TRAINING }}</b>
+                        <span class="profile-label">TRAINING:</span> <span class="profile-text">{{ p.education.highest_level.FORMAL_TRAINING }}</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        highest: <b>{{ p.education.highest_level.HIGHEST_EDUCATION }}</b>
+                        <span class="profile-label">HIGHEST:</span> <span class="profile-text">{{ p.education.highest_level.HIGHEST_EDUCATION }}</span>
                     </div>
                 </div>
             </div>
@@ -22,25 +22,25 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            start: <b>{{ x.START_DATE}}</b>
+                            <span class="profile-label">START:</span> <span class="profile-text">{{ x.START_DATE }}</span>
                         </div>
                         <div class="col">
-                            start: <b>{{ x.END_DATE}}</b>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            city: <b>{{ x.SCHOOL_CITY}}</b>
+                            <span class="profile-label">END:</span> <span class="profile-text">{{ x.END_DATE }}</span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            degree: <b>{{ x.DEGREE}}</b>
+                            <span class="profile-label">CITY:</span> <span class="profile-text">{{ x.SCHOOL_CITY }}</span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            major: <b>{{ x.MAJOR }}</b>
+                            <span class="profile-label">DEGREE:</span> <span class="profile-text">{{ x.DEGREE }}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <span class="profile-label">MAJOR:</span> <span class="profile-text">{{ x.MAJOR }}</span>
                         </div>
                     </div>
             </li>

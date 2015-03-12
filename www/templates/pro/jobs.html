@@ -10,33 +10,33 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            title: <b>{{ x.TITLE}}</b>
+                            <span class="profile-label">TITLE:</span> <span class="profile-text">{{ x.TITLE}}</span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            position: <b>{{ x.DESCRIPTION}}</b>
+                            <span class="profile-label">POSITION:</span> <span class="profile-text">{{ x.DESCRIPTION}}</span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            location: <b>{{ x.CITY + ' ' + x.STATE + ' ' + xCOUNTRY}}</b>
+                            <span class="profile-label">LOCATION:</span> <span class="profile-text">{{ x.CITY + ' ' + x.STATE + ' ' + xCOUNTRY }}</span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            type: <b>{{ x.JOB_TYPE}}</b>
+                            <span class="profile-label">JOB TYPE:</span> <span class="profile-text">{{ x.JOB_TYPE }}</span>
                         </div>
                         <div class="col">
-                            flown: <b>{{ x.PRIMARY_AIRCRAFT_FLOWN }}</b>
+                            <span class="profile-label">FLOWN:</span> <span class="profile-text">{{ x.PRIMARY_AIRCRAFT_FLOWN }}</span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            military: <b>{{ x.MILITARY_STATUS}}</b>
+                            <span class="profile-label">MILITARY:</span> <span class="profile-text">{{ x.MILITARY_STATUS }}</span>
                         </div>
                         <div class="col">
-                            still employed: <b>{{ x.CURRENT_EMPLOYER }}</b>
+                            <span class="profile-label">STILL EMPLOYED:</span> <span class="profile-text">{{ x.CURRENT_EMPLOYER }}</span>
                         </div>
                     </div>
             </li>
