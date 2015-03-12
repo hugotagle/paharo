@@ -20,12 +20,12 @@
             </div>
             <div class="row">
                 <div class="col">
-                    primary phone: <b>{{ p.contact.primary_phone}}</b>
+                    primary phone: <b>{{ '' + p.contact.primary_phone}}</b> <!-- iOS shows a link. Added empty string -->
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    secondary phone: <b>{{ p.contact.secondary_phone}}</b>
+                    secondary phone: <b>{{ '' + p.contact.secondary_phone}}</b> <!-- iOS shows a link. Added empty string -->
                 </div>
             </div>
             <div class="row">
