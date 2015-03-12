@@ -10,22 +10,22 @@
         <div class="card">
             <div class="row">
                 <div class="col">
-                    email: <b>{{ p.contact.email}}</b>
+                    <span class="profile-label">EMAIL:</span> <span class="profile-text">{{ p.contact.email}}</span>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    alternate email: <b>{{ p.contact.alternate_email}}</b>
+                    <span class="profile-label">ALTERNATE:</span> <span class="profile-text">{{ p.contact.alternate_email}}</span>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    primary phone: <b>{{ p.contact.primary_phone}}</b>
+                    <span class="profile-label">PHONE 1:</span> <span class="profile-text">{{ p.contact.primary_phone}}</span>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    secondary phone: <b>{{ p.contact.secondary_phone}}</b>
+                    <span class="profile-label">PHONE 2:</span> <span class="profile-text">{{ p.contact.secondary_phone}}</span>
                 </div>
             </div>
             <div class="row">
@@ -34,17 +34,17 @@
             </div>
             <div class="row">
                 <div class="col">
-                    address: <b>{{ p.contact.address1}}</b>
+                    <span class="profile-label">ADDRESS:</span> <span class="profile-text">{{ p.contact.address1}}</span>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    second line: <b>{{ p.contact.address2}}</b>
+                    <span class="profile-label">SECOND LINE:</span> <span class="profile-text">{{ p.contact.address2}}</span>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    city/state/zip: <b>{{ p.contact.city + ', ' + p.contact.state + ' ' + p.contact.zip}}</b>
+                    <span class="profile-label">CITY/STATE/ZIP:</span> <span class="profile-text">{{ p.contact.city + ', ' + p.contact.state + ' ' + p.contact.zip}}</span>
                 </div>
             </div>
     </ion-content>
