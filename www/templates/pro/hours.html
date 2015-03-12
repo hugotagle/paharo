@@ -10,39 +10,39 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            pic: <b>{{ x.PIC_HOURS + 0 }}</b>
+                            <span class="profile-label">PIC:</span> <span class="profile-text">{{ x.PIC_HOURS + 0 }}</span>
                         </div>
                         <div class="col">
-                            sic: <b>{{ x.SIC_HOURS + 0 }}</b>
+                            <span class="profile-label">SIC:</span> <span class="profile-text">{{ x.SIC_HOURS + 0 }}</span>
                         </div>
                         <div class="col">
-                            inst: <b>{{ x.ins_HOURS + 0 }}</b>
-                        </div>            
+                            <span class="profile-label">INST:</span> <span class="profile-text">{{ x.INS_HOURS + 0 }}</span>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            night: <b>{{ x.PIC_HOURS + 0 }}</b>
+                            <span class="profile-label">NIGHT:</span> <span class="profile-text">{{ x.NIGHT_HOURS + 0 }}</span>
                         </div>
                         <div class="col">
-                            last 12 mo: <b>{{ x.SIC_HOURS + 0 }}</b>
+                            <span class="profile-label">LAST 12 MO:</span> <span class="profile-text">{{ x.LAST_12MO_HOURS + 0 }}</span>
                         </div>
                         <div class="col">
-                            landigs: <b>{{ x.ins_HOURS + 0 }} </b>
-                        </div>            
-                    </div>            
+                            <span class="profile-label">LANDING:</span> <span class="profile-text">{{ x.NUMBER_LANDINGS + 0 }}</span>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col">
-                            last flown: <b>{{ x.LAST_FLOWN_DATE }}</b>
+                            <span class="profile-label">LAST FLOWN:</span> <span class="profile-text">{{ x.LAST_FLOWN_DATE}}</span>
                         </div>
                         <div class="col">
-                            type rating: <b>{{ x.CUR_TYPE_RATING + 0 }}</b>
-                        </div>                              
-                    </div>       
+                            <span class="profile-label">TYPE RATING:</span> <span class="profile-text">{{ x.CUR_TYPE_RATING}}</span>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col">
-                            notes: <b>{{ x.NOTES }}</b>            
-                    </div>                       
-                </div>
+                            <span class="profile-label">NOTES:</span> <span class="profile-text">{{ x.NOTES}}</span>
+                        </div>
+                    </div>
             </li>
         </ul>
     </ion-content>
