@@ -1,21 +1,45 @@
 <ion-view view-title="Employment">
     <ion-content>
-
-        <div class="card dark">
-            <ul>
-                <li data-ng-repeat="x in p.employment_history">
+        <ul>
+            <li data-ng-repeat="x in p.employment_history">
+                <div class="card">
                     <div class="row">
-                        <div class="col">
-                            Status: {{ x.STATUS}}
+                        <div class="col" style="font-size:16px">
+                            <b>{{ x.COMPANY_NAME }}</b>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            Location: {{ x.CITY}} {{x.STATE}}
+                            title: <b>{{ x.TITLE}}</b>
                         </div>
                     </div>
-                </li>
-            </ul>
-        </div>
+                    <div class="row">
+                        <div class="col">
+                            position: <b>{{ x.DESCRIPTION}}</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            location: <b>{{ x.CITY + ' ' + x.STATE + ' ' + xCOUNTRY}}</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            type: <b>{{ x.JOB_TYPE}}</b>
+                        </div>
+                        <div class="col">
+                            flown: <b>{{ x.PRIMARY_AIRCRAFT_FLOWN }}</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            military: <b>{{ x.MILITARY_STATUS}}</b>
+                        </div>
+                        <div class="col">
+                            still employed: <b>{{ x.CURRENT_EMPLOYER }}</b>
+                        </div>
+                    </div>
+            </li>
+        </ul>
     </ion-content>
 </ion-view>

@@ -1,21 +1,49 @@
 <ion-view view-title="Education">
     <ion-content>
-        <div class="card dark">
-            <div class="row">
-                <div class="col">
-                    {{ p.education.highest_level.FORMAL_TRAINING}}
+        <ul>
+            <div class="card">
+                <div class="row">
+                    <div class="col">
+                        training: <b>{{ p.education.highest_level.FORMAL_TRAINING }}</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        highest: <b>{{ p.education.highest_level.HIGHEST_EDUCATION }}</b>
+                    </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col">
-                    <ul>
-                        <li data-ng-repeat="x in p.education.education_history">
-                            {{ x.DEGREE }}
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+            <li data-ng-repeat="x in p.education.education_history">
+                <div class="card">
+                    <div class="row">
+                        <div class="col" style="font-size:16px">
+                            <b>{{ x.SCHOOL_NAME }}</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            start: <b>{{ x.START_DATE}}</b>
+                        </div>
+                        <div class="col">
+                            start: <b>{{ x.END_DATE}}</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            city: <b>{{ x.SCHOOL_CITY}}</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            degree: <b>{{ x.DEGREE}}</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            major: <b>{{ x.MAJOR }}</b>
+                        </div>
+                    </div>
+            </li>
+        </ul>
     </ion-content>
 </ion-view>
