@@ -1,12 +1,19 @@
 /* Empty. Add your own CSS if you like */
 
+.profile-subheader {
+    font-size: 16px;
+    color: darkgreen;
+    font-weight: 500;
+}
+
 .profile-label {
-    font-size: 12px;
+    font-size: 11px;
     color: black;
+    font-weight: 300;
 }
 
 .profile-text {
-    font-size: 14px;
+    font-size: 15px;
     color: darkred;
-    font-weight:500;
+    font-weight: 300;
 }

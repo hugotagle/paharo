@@ -4,8 +4,8 @@
             <li data-ng-repeat="x in p.certifications | orderBy:'CERT_NAME'">
                 <div class="card">
                     <div class="row">
-                        <div class="col" style="font-size:16px">
-                            <b>{{ x.CERT_NAME }}</b>
+                        <div class="col">
+                            <span class="profile-subheader">{{ x.CERT_NAME }}</span>
                         </div>
                     </div>
                     <div class="row">
