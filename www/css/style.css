@@ -2,19 +2,19 @@
 
 .profile-subheader {
     font-size: 17px;
-    color: midnightblue;
-    font-weight: 400;
+    color: darkslategrey;
+    font-weight: 500;
 }
 
 .profile-label {
-    font-size: 11px;
+    font-size: 10px;
     color: black;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .profile-text {
     font-family: 'Tahoma', 'Geneva', sans-serif;
     font-size: 15px;
     color: midnightblue;
-    font-weight: 300;
+    font-weight: 400;
 }
