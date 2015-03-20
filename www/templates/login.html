@@ -1,24 +1,26 @@
 <ion-view view-title="Login" data-ng-controller="LoginController">
-    <ion-content>
-        <div class="list list-inset">
-            <label class="item item-input">
-                <input type="text" placeholder="Username" data-ng-model="params.username">
-            </label>
-            <label class="item item-input">
-                <input type="password" placeholder="Password" data-ng-model="params.password">
-            </label>
-        </div>
-        <div class="row" s>
-            <div class="col">
-                <button class="button button-block button-positive" data-ng-click="login()">Sign in</button>
+    <ion-content scroll="false">
+        <div style="position:relative;margin-top:30%">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="text" placeholder="Username" data-ng-model="params.username">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Password" data-ng-model="params.password">
+                </label>
             </div>
-        </div>
-        <div class="row" s>
-            <div class="col">
-                <span class="input-label">Forgot&nbsp;password?</span>
+            <div class="row" s>
+                <div class="col">
+                    <button class="button button-block button-positive" data-ng-click="login()">Sign in</button>
+                </div>
             </div>
-            <div class="col">
-                <span class="input-label" style="float:right">Join&nbsp;now</span>
+            <div class="row" s>
+                <div class="col">
+                    <span class="input-label">Forgot&nbsp;password?</span>
+                </div>
+                <div class="col">
+                    <span class="input-label" style="float:right">Join&nbsp;now</span>
+                </div>
             </div>
         </div>
     </ion-content>

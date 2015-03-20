@@ -1,16 +1,18 @@
 <ion-view view-title="Splash" ng-controller="SplashController">
-    <ion-content>
-        <div class="card" data-ng-click="settings()">
-            <div class="item item-text-wrap">
-                Welcome aboard. Pilot Credentials, Where Qualified Pilots and Air Carriers Meet.
+    <ion-content scroll="false">
+        <div style="position:relative;margin-top:40%">
+            <div class="card" data-ng-click="settings()">
+                <div class="item item-text-wrap">
+                    Welcome aboard. Pilot Credentials, Where Qualified Pilots and Air Carriers Meet.
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button class="button button-block" data-ng-click="register()">Join now</button>
-            </div>
-            <div class="col">
-                <button class="button button-block button-positive" data-ng-click="login()">Sign in</button>
+            <div class="row" style="position:relative; margin-top:80%">
+                <div class="col">
+                    <button class="button button-block" data-ng-click="register()">Join now</button>
+                </div>
+                <div class="col">
+                    <button class="button button-block button-positive" data-ng-click="login()">Sign in</button>
+                </div>
             </div>
         </div>
     </ion-content>
